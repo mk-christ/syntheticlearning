@@ -15,9 +15,9 @@ title = "Synthetic Learning"
   # copyright = "Copy, _right?_ :thinking_face:"
 
 [params.author]
-  # name = "Kamga Mogoun Christelle"
+  name = "Kamga Mogoun Christelle"
   email = "christellekamgamogoun@gmail.com"
-  # image = "profile.jpg"
+  image = "profile.jpg"
   imageQuality = 96
   headline = "Mathematic Researcher · Machine Learning enthusiast · AI enthusiast"
   bio = "Mathematic Researcher · Machine Learning enthusiast · AI enthusiast"
