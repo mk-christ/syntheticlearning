@@ -25,10 +25,10 @@
  pageRef = "about/"
  weight = 60
 
-[[main]]
- name = "Resume"
- pageRef = "Resume/"
- weight = 70
+# [[main]]
+# name = "Resume"
+# pageRef = "Resume/"
+# weight = 70
 
 # [[main]]
 #   pre = "github"
