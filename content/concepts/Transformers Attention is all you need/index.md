@@ -85,7 +85,7 @@ Multi-Head attention allows the transformer to learn different relationships bet
 
 On each of these projected versions of queries, *keys* and *values* we then perform the attention function in parallel(meaning that all the projections are processed at the same time), producing {{< katex >}}\(d_v\)-dimensional output values. These are concatenated and projected again, which gives the final values, as depicted in Figure 3.
 
-During the training phase, the Multi-Head Attention mechanism has to learn the best projection matrices {{< katex >}}\(QW_i^Q, KW_i^K, VW_i^V\).
+During the training phase, the Multi-Head Attention mechanism has to learn the best projection matrices {{< katex >}}\(W^Q, W^K, W^V\).
 
 $$
 \begin{aligned}
@@ -123,7 +123,7 @@ from layer to layer.The dimensionality of input and output is dmodel = 512, and 
 
 Since the transformer  contains no recurrence and no convolution, in order for the model to make use of the order of the sequence, the authors of transformer introduce the notion of positional encoding.The positional encoding is a vector that contains information about the position of a specific embedding (word) in a sequence. It is added to the embedding at the bottom of the encoder and decoder stacks. So let us take an example ,without PE a sentence *John saw marry doing laundry* will be the same as *marry saw John doing laundry*.
 
-The PE have the same dimension dmodel as the embeddings and it uses the following formula
+The PE have the same dimension d<sub>model</sub> as the embeddings so that the two can be summed and it uses the following formula :
 
 $$
 PE_{(pos, 2i)} = \sin(pos/10000^{2i/d_{\text{model}}})\\
