@@ -13,53 +13,30 @@ The effectiveness of an Intrusion Detection System (IDS) relies heavily on the q
 ## KDD Cup 99
 
 ### Origins
-Created in two weeks in 1999 by the *Lincoln Laboratory group* at
-MIT, the KDD’99 dataset was built based on data captured during the
-DARPAIDSevaluation program in 1998. The training dataset consists of
-approximately 4,900,000 connection vectors, each containing 41 features
-and labeled as either normal or as an attack falling into exactly one
-specific attack type. The simulated attacks fall into one of the following
-four categories:
+Created in two weeks in 1999 by the *Lincoln Laboratory group* at MIT, the KDD’99 dataset was built based on data captured during the DARPAIDSevaluation program in 1998. The training dataset consists of approximately 4,900,000 connection vectors, each containing 41 features and labeled as either normal or as an attack falling into exactly one specific attack type. The simulated attacks fall into one of the following four categories:
 
-- Denial of Service Attack (DoS): An attack in which the attacker
-makes some computing or memory resource too busy or too full to handle
-legitimate requests, or denies legitimate users access to a machine.
+- Denial of Service Attack (DoS): An attack in which the attacker makes some computing or memory resource too busy or too full to handle legitimate requests, or denies legitimate users access to a machine.
 
-- User to Root Attack (U2R): A class of exploit in which the attacker
-starts out with access to a normal user account on the system (perhaps
-gained by sniffing passwords, a dictionary attack, or social engineering)
-and is able to exploit some vulnerability to gain root access to the system
+- User to Root Attack (U2R): A class of exploit in which the attacker starts out with access to a normal user account on the system (perhaps gained by sniffing passwords, a dictionary attack, or social engineering) and is able to exploit some vulnerability to gain root access to the system
 
-- Remote to Local Attack (R2L): Occurs when an attacker who has
-the ability to send packets to a machine over a network—but who does
-not have an account on that machine—exploits some vulnerability to
-gain local access as a user of that machine.
+- Remote to Local Attack (R2L): Occurs when an attacker who has the ability to send packets to a machine over a network—but who does not have an account on that machine—exploits some vulnerability to gain local access as a user of that machine.
 
-- Probing Attack: An attempt to gather information about a network
-of computers for the apparent purpose of circumventing its security con
-trols.
+- Probing Attack: An attempt to gather information about a network of computers for the apparent purpose of circumventing its security controls.
 
-The datasets contain a total of *24 training attack types*, with an
-additional *14 types* appearing only in the test data
+The datasets contain a total of *24 training attack types*, with an additional *14 types* appearing only in the test data
 
 ### Features Classifications
 
 KDD’99 features can be classified into three groups:
 
-- Basic features: This category encapsulates all the attributes that can
-be extracted from a TCP/IP connection. Most of these features lead to
-an implicit delay in detection.
-- Traffic features: This category includes features that are computed
-with respect to a window interval and is divided into two groups:
+- Basic features: This category encapsulates all the attributes that can be extracted from a TCP/IP connection. Most of these features lead to an implicit delay in detection.
 
-    1. Same host features: Examine only the connections in the past 2
-seconds that have the same destination host as the current connection,
-and calculate statistics related to protocol behavior, service, etc.
-    2. Same service features: Examine only the connections in the past 2
-seconds that have the same service as the current connection.
-- Content features:are attributes that look at the actual data inside a
-network packet (the payload), rather than just looking at the speed or
-volume of the traffic
+- Traffic features: This category includes features that are computed with respect to a window interval and is divided into two groups:
+
+    1. Same host features: Examine only the connections in the past 2 seconds that have the same destination host as the current connection,and calculate statistics related to protocol behavior, service, etc.
+    2. Same service features: Examine only the connections in the past 2 seconds that have the same service as the current connection.
+
+- Content features:are attributes that look at the actual data inside a network packet (the payload), rather than just looking at the speed or volume of the traffic
 
 ### Criticisms and Flaws 
 As mentioned in the previous section, since KDD’99 is built based on
